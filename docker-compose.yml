@@ -1,0 +1,9 @@
+services:
+  php:
+    build: ./docker/php
+    command: sh -c "tail -f /dev/null"
+    volumes:
+      - ./:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    labels:
+      - "project=php-scripts"
